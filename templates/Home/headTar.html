@@ -9,10 +9,10 @@
             <ul class="nav navbar-nav navbar-right">
                  {% if request.session.user_info %}
                     <li>
-                        <a href="/backend/index.html">{{ request.session.user_info.nickname }}</a>
+                        <a href="/index.html">{{ request.session.user_info.nickname }}</a>
                     </li>
                     <li><a style="padding-left: 0;padding-right: 0;">·</a></li>
-                    <li><a href="/backend/index.html">管理</a></li>
+                    <li><a href="/index.html">管理</a></li>
                     <li><a style="padding-left: 0;padding-right: 0;">|</a></li>
                     <li><a href="/logout.html">退出</a></li>
                 {% else %}
