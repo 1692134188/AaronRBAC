@@ -3,23 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-      <style>
-        .content{
+    <style>
+        .content {
             margin-left: 20px;
+            display: none;
         }
-        .content a{
+        .content a {
             display: block;
         }
-        .active > .content{
+        .active > .content {
             display: block;
         }
     </style>
+    <script type="text/javascript">
+        function showChild(obj) {
+            $(obj).parent().addClass("active");//将父级节点设置为active ，子节点显示
+            $(obj).parent().siblings().removeClass("active");
+        }
+    </script>
 </head>
 <body>
 <div>
     <div style="float: left;width: 20%;">
         {{ menu_string|safe }}
     </div>
+     <div style="float: left;width: 80px;">
+        {% if 'put' in action_list %}
+            <a href="http://www.baidu.com">修改</a>
+        {% endif %}
+    </div>
+    <script type="text/javascript" src="/static/js/jquery-3.3.1.min.js"></script>
 </div>
 
 </body>
