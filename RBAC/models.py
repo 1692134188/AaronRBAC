@@ -4,6 +4,11 @@ from django.db import models
 
 #用户表
 class User(models.Model):
+    user_status_choices = (
+        (0, '离职'),
+        (1, '在职'),
+    )
+    user_status_id = models.IntegerField(choices=user_status_choices, default=1)
     userName=models.CharField(max_length=32)
     password=models.CharField(max_length=64)
     class Meta:

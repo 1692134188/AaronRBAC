@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../../static/js/jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" href="../../static/plugins/bootstrap/css/bootstrap.css"/>
+</head>
+<body>
+<div style="width: 800px;margin: 0 auto;">
+    <h1>用户列表</h1>
+    <table class="table table-bordered">
+        <thead id="table_th"></thead>
+        <tbody id="table_tb"></tbody>
+    </table>
+</div>
+
+<script type="text/javascript">
+    $(function () {
+        init();
+    })
+
+    function init() {
+        {#通过ajax请求数据#}
+        $.ajax({
+            url: '/web/user-json.html',
+            type: 'GET',
+            dataType: "JSON",
+            success: function (result) {
+                initGlobalData(result.global_dict);
+                initHeader(result.table_config);
+                initBody(result.table_config, result.data_list);
+            }
+        })
+    }
+
+    function initGlobalData(global_dict) {
+        $.each(global_dict, function (k, v) {
+            window[k] = v;
+        })
+    }
+
+    function initHeader(table_config) {
+        var tr = document.createElement('tr');
+        $.each(table_config, function (k, item) {
+            if (item.display) {
+                var th = document.createElement('th')
+                th.innerHTML = item.title
+                $(tr).append(th)
+            }
+        })
+        $('#table_th').append(tr);
+    }
+
+    function initBody(table_config, data_list) {
+        {#遍历循环行#}
+        $.each(data_list, function (k, row) {
+            var tr = document.createElement('tr');
+            $.each(table_config, function (k, config) {
+                if (config.display) {
+                    {#遍历循环列#}
+                    var td = document.createElement('td')
+                    {#生成文本信息#}
+                    td.innerHTML = makeTdText(row, config);
+                    $(tr).append(td)
+                }
+            })
+            $('#table_tb').append(tr);
+        })
+    }
+
+    ///把'text': {'content': "<a href='/userdetail-{m}.html'>{n}</a>", 'kwargs': {'n': '查看详细', 'm': '@id'}},
+    ///转换成 "<a href='/userdetail-1.html'>查看详细</a>"
+    function makeTdText(row, config) {
+        //第一步，把{'n': '查看详细', 'm': '@id'}  转换成  {n: "查看详细", m: 1}
+        var kwargs = {};  //  {n: "查看详细", m: 1}
+        $.each(config.text.kwargs, function (key, value) {
+            if (value.substring(0, 2) == '@@') {
+                var globalName = value.substring(2, value.length); // 全局变量的名称
+                var currentId = row[config.q]; // 获取的数据库中存储的数字类型值
+                var t = getTextFromGlobalById(globalName, currentId);
+                kwargs[key] = t;
+            } else if (value[0] == '@') {
+                kwargs[key] = row[value.substring(1, value.length)];
+            } else {
+                kwargs[key] = value;
+            }
+        });
+        //第二步，把 {n: "查看详细", m: 1} 转换成
+        var temp = config.text.content.format(kwargs);
+        return temp;
+    }
+
+    String.prototype.format = function (kwargs) {
+        // this ="laiying: {age} - {gender}";
+        // kwargs =  {'age':18,'gender': '女'}
+        var ret = this.replace(/\{(\w+)\}/g, function (km, m) {
+            return kwargs[m];
+        });
+        return ret;
+    };
+
+    function getTextFromGlobalById(globalName, currentId) {
+        // globalName = "user_type_choices"
+        // currentId = 1
+        var ret = null;
+        $.each(window[globalName], function (k, item) {
+            if (item[0] == currentId) {
+                ret = item[1];
+                return
+            }
+        });
+        return ret;
+    }
+</script>
+</body>
+</html>
