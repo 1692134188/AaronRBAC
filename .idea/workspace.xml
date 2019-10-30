@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="e257ac1e-21c1-4b03-b8a5-fdbe6e0121ce" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/templates/Manage/user.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Manage/user.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/View/User.py" beforeDir="false" afterPath="$PROJECT_DIR$/web/View/User.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -46,27 +45,41 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/Manage/user.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="174" column="39" selection-start-line="174" selection-start-column="39" selection-end-line="174" selection-end-column="39" />
+            <state relative-caret-position="391">
+              <caret line="33" column="25" lean-forward="true" selection-start-line="31" selection-start-column="8" selection-end-line="33" selection-end-column="25" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="e#377#698#0#HTML" />
+                <element signature="e#793#1029#0#HTML" />
+                <element signature="e#738#1063#0#HTML" />
+                <element signature="e#1112#1538#0#HTML" />
+                <element signature="e#1618#1721#0#HTML" />
+                <element signature="e#1630#1646#0#HTML" />
+                <element signature="e#2347#2598#0#HTML" />
+                <element signature="e#2946#3340#0#HTML" />
                 <element signature="e#4296#5190#0#HTML" />
+                <element signature="e#5139#7114#0#HTML" />
                 <element signature="e#6719#6730#0#HTML" />
+                <element signature="e#7151#8345#0#HTML" />
+                <element signature="e#8447#9365#0#HTML" />
+                <element signature="e#9400#9931#0#HTML" />
+                <element signature="e#9965#10717#0#HTML" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/View/User.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="373">
-              <caret line="43" column="86" lean-forward="true" selection-start-line="42" selection-start-column="15" selection-end-line="43" selection-end-column="86" />
+            <state relative-caret-position="375">
+              <caret line="51" column="9" lean-forward="true" selection-start-line="15" selection-start-column="6" selection-end-line="51" selection-end-column="9" />
               <folding>
                 <element signature="e#0#48#0" expanded="true" />
+                <element signature="e#354#1182#0" />
               </folding>
             </state>
           </provider>
@@ -95,8 +108,8 @@
       <find>config</find>
       <find>makeTdText</find>
       <find>device</find>
-      <find>new-val</find>
       <find>new_val</find>
+      <find>new-val</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -129,7 +142,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-9" />
     <option name="y" value="-9" />
     <option name="width" value="1297" />
@@ -263,12 +276,12 @@
       <updated>1571819520779</updated>
       <workItem from="1571819522298" duration="59727000" />
       <workItem from="1572325383883" duration="5734000" />
-      <workItem from="1572399388975" duration="11758000" />
+      <workItem from="1572399388975" duration="12401000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="77219000" />
+    <option name="totallyTimeSpent" value="77862000" />
   </component>
   <component name="TodoView" selected-index="1">
     <todo-panel id="selected-file">
@@ -564,24 +577,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/Manage/user.html">
+    <entry file="file://$PROJECT_DIR$/web/View/User.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="174" column="39" selection-start-line="174" selection-start-column="39" selection-end-line="174" selection-end-column="39" />
+        <state relative-caret-position="375">
+          <caret line="51" column="9" lean-forward="true" selection-start-line="15" selection-start-column="6" selection-end-line="51" selection-end-column="9" />
           <folding>
-            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#4296#5190#0#HTML" />
-            <element signature="e#6719#6730#0#HTML" />
+            <element signature="e#0#48#0" expanded="true" />
+            <element signature="e#354#1182#0" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/View/User.py">
+    <entry file="file://$PROJECT_DIR$/templates/Manage/user.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="373">
-          <caret line="43" column="86" lean-forward="true" selection-start-line="42" selection-start-column="15" selection-end-line="43" selection-end-column="86" />
+        <state relative-caret-position="391">
+          <caret line="33" column="25" lean-forward="true" selection-start-line="31" selection-start-column="8" selection-end-line="33" selection-end-column="25" />
           <folding>
-            <element signature="e#0#48#0" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#377#698#0#HTML" />
+            <element signature="e#793#1029#0#HTML" />
+            <element signature="e#738#1063#0#HTML" />
+            <element signature="e#1112#1538#0#HTML" />
+            <element signature="e#1618#1721#0#HTML" />
+            <element signature="e#1630#1646#0#HTML" />
+            <element signature="e#2347#2598#0#HTML" />
+            <element signature="e#2946#3340#0#HTML" />
+            <element signature="e#4296#5190#0#HTML" />
+            <element signature="e#5139#7114#0#HTML" />
+            <element signature="e#6719#6730#0#HTML" />
+            <element signature="e#7151#8345#0#HTML" />
+            <element signature="e#8447#9365#0#HTML" />
+            <element signature="e#9400#9931#0#HTML" />
+            <element signature="e#9965#10717#0#HTML" />
           </folding>
         </state>
       </provider>

@@ -29,6 +29,9 @@
     $(function () {
         init();
         bindEditMode();
+        bindCheckAll();
+        bindCancelAll();
+        bindReverseAll();
     })
 
     function init() {
@@ -170,9 +173,9 @@
                 if (editType == 'select') {
                     var globalName = $(this).attr('global-name'); //  "users_status_choices"
                     var origin = $(this).attr('origin'); // 1
-                    var new_val= $(this).attr('new-val'); // 1
-                    if (typeof(new_val)!="undefined"){
-                        origin=new_val;
+                    var new_val = $(this).attr('new-val'); // 1
+                    if (typeof (new_val) != "undefined") {
+                        origin = new_val;
                     }
                     // 生成select标签
                     var sel = document.createElement('select');
@@ -226,6 +229,64 @@
                 }
 
             }
+        })
+    }
+
+    function bindReverseAll() {
+        $('#idReverseAll').click(function () {
+            $('#table_tb').find(':checkbox').each(function () {
+                // $(this) => checkbox
+                if ($('#idEditMode').hasClass('btn-warning')) {
+                    if ($(this).prop('checked')) {
+                        $(this).prop('checked', false);
+                        trOutEditMode($(this).parent().parent());
+                    } else {
+                        $(this).prop('checked', true);
+                        trIntoEditMode($(this).parent().parent());
+                    }
+                } else {
+                    if ($(this).prop('checked')) {
+                        $(this).prop('checked', false);
+                    } else {
+                        $(this).prop('checked', true);
+                    }
+                }
+            })
+        })
+    }
+
+    function bindCancelAll() {
+        $('#idCancelAll').click(function () {
+            $('#table_tb').find(':checked').each(function () {
+                // $(this) => checkbox
+                if ($('#idEditMode').hasClass('btn-warning')) {
+                    $(this).prop('checked', false);
+                    // 退出编辑模式
+                    trOutEditMode($(this).parent().parent());
+                } else {
+                    $(this).prop('checked', false);
+                }
+            });
+        })
+    }
+
+    function bindCheckAll() {
+        $('#idCheckAll').click(function () {
+            $('#table_tb').find(':checkbox').each(function () {
+                // $(this)  = checkbox
+                if ($('#idEditMode').hasClass('btn-warning')) {
+                    if ($(this).prop('checked')) {
+                        // 当前行已经进入编辑模式了
+                    } else {
+                        // 进入编辑模式
+                        var $currentTr = $(this).parent().parent();
+                        trIntoEditMode($currentTr);
+                        $(this).prop('checked', true);
+                    }
+                } else {
+                    $(this).prop('checked', true);
+                }
+            })
         })
     }
 
