@@ -9,15 +9,26 @@
 <body>
 <div style="width: 800px;margin: 0 auto;">
     <h1>用户列表</h1>
-    <table class="table table-bordered">
-        <thead id="table_th"></thead>
-        <tbody id="table_tb"></tbody>
-    </table>
+    <div class="btn-group" role="group" aria-label="...">
+        <button id="idCheckAll" type="button" class="btn btn-default">全选</button>
+        <button id="idReverseAll" type="button" class="btn btn-default">反选</button>
+        <button id="idCancelAll" type="button" class="btn btn-default">取消</button>
+        <button id="idEditMode" type="button" class="btn btn-default">进入编辑模式</button>
+        <button type="button" class="btn btn-default">批量删除</button>
+        <button id="idSave" type="button" class="btn btn-default">保存</button>
+        <a id="idAdd" href="/web/asset-add.html" class="btn btn-default">添加</a>
+    </div>
+</div>
+<table class="table table-bordered">
+    <thead id="table_th"></thead>
+    <tbody id="table_tb"></tbody>
+</table>
 </div>
 
 <script type="text/javascript">
     $(function () {
         init();
+        bindEditMode();
     })
 
     function init() {
@@ -62,6 +73,14 @@
                     var td = document.createElement('td')
                     {#生成文本信息#}
                     td.innerHTML = makeTdText(row, config);
+                    /* 属性colConfig.attrs = {'edit-enable': 'true','edit-type': 'select'}  */
+                    $.each(config.attrs, function (kk, vv) {
+                        if (vv[0] == '@') {
+                            td.setAttribute(kk, row[vv.substring(1, vv.length)]);
+                        } else {
+                            td.setAttribute(kk, vv);
+                        }
+                    });
                     $(tr).append(td)
                 }
             })
@@ -112,6 +131,105 @@
         });
         return ret;
     }
+
+    {#按钮功能开始#}
+
+    function bindEditMode() {
+        $('#idEditMode').click(function () {
+            var editing = $(this).hasClass('btn-warning');
+            if (editing) {
+                // 退出编辑模式
+                $(this).removeClass('btn-warning');
+                $(this).text('进入编辑模式');
+
+                $('#table_tb').find(':checked').each(function () {
+                    var $currentTr = $(this).parent().parent();
+                    trOutEditMode($currentTr);
+                })
+
+            } else {
+                // 进入编辑模式
+                $(this).addClass('btn-warning');
+                $(this).text('退出编辑模式');
+                $('#table_tb').find(':checked').each(function () {
+                    var $currentTr = $(this).parent().parent();
+                    trIntoEditMode($currentTr);
+                })
+            }
+        })
+    }
+
+    function trIntoEditMode($tr) {
+        $tr.addClass('success');
+        $tr.attr('has-edit', 'true');
+        $tr.children().each(function () {
+            // $(this) => td
+            var editEnable = $(this).attr('edit-enable');
+            var editType = $(this).attr('edit-type');
+            if (editEnable == 'true') {
+                if (editType == 'select') {
+                    var globalName = $(this).attr('global-name'); //  "users_status_choices"
+                    var origin = $(this).attr('origin'); // 1
+                    var new_val= $(this).attr('new-val'); // 1
+                    if (typeof(new_val)!="undefined"){
+                        origin=new_val;
+                    }
+                    // 生成select标签
+                    var sel = document.createElement('select');
+                    sel.className = "form-control";
+                    $.each(window[globalName], function (k1, v1) {
+                        var op = document.createElement('option');
+                        op.setAttribute('value', v1[0]);
+                        op.innerHTML = v1[1];
+                        $(sel).append(op);
+                    });
+                    $(sel).val(origin);
+
+                    $(this).html(sel);
+                } else if (editType == 'input') {
+                    // input文本框
+                    // *******可以进入编辑模式*******
+                    var innerText = $(this).text();
+                    var tag = document.createElement('input');
+                    tag.className = "form-control";
+                    tag.value = innerText;
+                    $(this).html(tag);
+                }
+            }
+        })
+    }
+
+    function trOutEditMode($tr) {
+        $tr.removeClass('success');
+        $tr.children().each(function () {
+            // $(this) => td
+            var editEnable = $(this).attr('edit-enable');
+            var editType = $(this).attr('edit-type');
+            if (editEnable == 'true') {
+                if (editType == 'select') {
+                    // 获取正在编辑的select对象
+                    var $select = $(this).children().first();
+                    // 获取选中的option的value
+                    var newId = $select.val();
+                    // 获取选中的option的文本内容
+                    var newText = $select[0].selectedOptions[0].innerHTML;
+                    // 在td中设置文本内容
+                    $(this).html(newText);
+                    $(this).attr('new-val', newId);
+
+                } else if (editType == 'input') {
+                    // *******可以退出编辑模式*******
+                    var $input = $(this).children().first();
+                    var inputValue = $input.val();
+                    $(this).html(inputValue);
+                    $(this).attr('new-val', inputValue);
+                }
+
+            }
+        })
+    }
+
+    {#按钮功能结束#}
 </script>
 </body>
 </html>
