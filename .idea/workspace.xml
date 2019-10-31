@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e257ac1e-21c1-4b03-b8a5-fdbe6e0121ce" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/web/View/Tools/AaronPager.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/View/Tools/pagination.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/AaronRBAC.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/Manage/user.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Manage/user.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/View/User.py" beforeDir="false" afterPath="$PROJECT_DIR$/web/View/User.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -53,30 +50,44 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/Manage/user.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="185">
-              <caret line="33" selection-start-line="33" selection-end-line="33" />
-              <folding>
-                <element signature="e#1880#2237#0#HTML" />
-                <element signature="e#2286#3299#0#HTML" />
-                <element signature="e#3305#3408#0#HTML" />
-                <element signature="e#3497#4281#0#HTML" />
-                <element signature="e#4617#4913#0#HTML" />
-                <element signature="e#4959#5773#0#HTML" />
-                <element signature="e#7483#8582#0#HTML" />
-                <element signature="e#8612#9151#0#HTML" />
-                <element signature="e#9183#10032#0#HTML" />
-                <element signature="e#10063#10548#0#HTML" />
-                <element signature="e#10578#11268#0#HTML" />
-                <element signature="e#12970#13126#0#HTML" />
-              </folding>
+            <state relative-caret-position="485">
+              <caret line="31" column="33" selection-start-line="31" selection-start-column="33" selection-end-line="31" selection-end-column="33" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/static/js/AaronRBAC.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="275">
+              <caret line="337" selection-start-line="337" selection-end-line="337" />
+              <folding>
+                <element signature="e#819#910#0" />
+                <element signature="e#950#1307#0" />
+                <element signature="e#1356#2369#0" />
+                <element signature="e#2401#2448#0" />
+                <element signature="e#2454#2557#0" />
+                <element signature="e#2646#3430#0" />
+                <element signature="e#3480#3705#0" />
+                <element signature="e#3766#4062#0" />
+                <element signature="e#4108#4922#0" />
+                <element signature="e#4957#6598#0" />
+                <element signature="e#6632#7731#0" />
+                <element signature="e#7761#8300#0" />
+                <element signature="e#8332#9181#0" />
+                <element signature="e#9212#9697#0" />
+                <element signature="e#9727#10417#0" />
+                <element signature="e#10443#11693#0" />
+                <element signature="e#11726#11863#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/View/User.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="350">
+            <state relative-caret-position="725">
               <caret line="65" lean-forward="true" selection-start-line="65" selection-end-line="65" />
               <folding>
                 <element signature="e#0#49#0" expanded="true" />
@@ -127,6 +138,7 @@
         <option value="CSS File" />
         <option value="Python Script" />
         <option value="HTML File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -160,6 +172,8 @@
       <find>html</find>
       <find>print</find>
       <find>window</find>
+      <find>/web/</find>
+      <find>getUrlParam</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -187,8 +201,9 @@
         <option value="$PROJECT_DIR$/RBAC/models.py" />
         <option value="$PROJECT_DIR$/AaronRBAC/settings.py" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/.datagrid/cell" />
-        <option value="$PROJECT_DIR$/templates/Manage/user.html" />
         <option value="$PROJECT_DIR$/web/View/User.py" />
+        <option value="$PROJECT_DIR$/templates/Manage/user.html" />
+        <option value="$PROJECT_DIR$/static/js/AaronRBAC.js" />
       </list>
     </option>
   </component>
@@ -214,7 +229,13 @@
             <path>
               <item name="AaronRBAC" type="b2602c69:ProjectViewProjectNode" />
               <item name="AaronRBAC" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AaronRBAC" type="b2602c69:ProjectViewProjectNode" />
               <item name="AaronRBAC" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="AaronRBAC" type="b2602c69:ProjectViewProjectNode" />
@@ -315,12 +336,12 @@
       <workItem from="1572325383883" duration="5734000" />
       <workItem from="1572399388975" duration="18702000" />
       <workItem from="1572429747158" duration="743000" />
-      <workItem from="1572476432789" duration="12026000" />
+      <workItem from="1572476432789" duration="13082000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="96932000" />
+    <option name="totallyTimeSpent" value="97988000" />
   </component>
   <component name="TodoView" selected-index="1">
     <todo-panel id="selected-file">
@@ -335,12 +356,12 @@
     <frame x="-7" y="-7" width="1550" height="878" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19906166" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19906166" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.04155496" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.04155496" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.38069704" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -356,7 +377,7 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="SciView" order="3" weight="0.3297587" />
-      <window_info anchor="right" id="Database" order="4" visible="true" weight="0.18431635" />
+      <window_info anchor="right" id="Database" order="4" visible="true" weight="0.17962466" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -644,34 +665,46 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/Manage/user.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="185">
-          <caret line="33" selection-start-line="33" selection-end-line="33" />
-          <folding>
-            <element signature="e#1880#2237#0#HTML" />
-            <element signature="e#2286#3299#0#HTML" />
-            <element signature="e#3305#3408#0#HTML" />
-            <element signature="e#3497#4281#0#HTML" />
-            <element signature="e#4617#4913#0#HTML" />
-            <element signature="e#4959#5773#0#HTML" />
-            <element signature="e#7483#8582#0#HTML" />
-            <element signature="e#8612#9151#0#HTML" />
-            <element signature="e#9183#10032#0#HTML" />
-            <element signature="e#10063#10548#0#HTML" />
-            <element signature="e#10578#11268#0#HTML" />
-            <element signature="e#12970#13126#0#HTML" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/View/User.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
+        <state relative-caret-position="725">
           <caret line="65" lean-forward="true" selection-start-line="65" selection-end-line="65" />
           <folding>
             <element signature="e#0#49#0" expanded="true" />
             <element signature="e#365#1739#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/Manage/user.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="485">
+          <caret line="31" column="33" selection-start-line="31" selection-start-column="33" selection-end-line="31" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/AaronRBAC.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="337" selection-start-line="337" selection-end-line="337" />
+          <folding>
+            <element signature="e#819#910#0" />
+            <element signature="e#950#1307#0" />
+            <element signature="e#1356#2369#0" />
+            <element signature="e#2401#2448#0" />
+            <element signature="e#2454#2557#0" />
+            <element signature="e#2646#3430#0" />
+            <element signature="e#3480#3705#0" />
+            <element signature="e#3766#4062#0" />
+            <element signature="e#4108#4922#0" />
+            <element signature="e#4957#6598#0" />
+            <element signature="e#6632#7731#0" />
+            <element signature="e#7761#8300#0" />
+            <element signature="e#8332#9181#0" />
+            <element signature="e#9212#9697#0" />
+            <element signature="e#9727#10417#0" />
+            <element signature="e#10443#11693#0" />
+            <element signature="e#11726#11863#0" />
           </folding>
         </state>
       </provider>
