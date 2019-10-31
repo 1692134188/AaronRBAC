@@ -1,7 +1,7 @@
 from django.shortcuts import render, HttpResponse
 from django.views import View
 from RBAC.models import User, models
-
+from django.http.request import QueryDict
 import json
 
 
@@ -66,3 +66,17 @@ class UserJsonView(View):
             }
         }
         return HttpResponse(json.dumps(result))
+
+    def put(self, request, *args, **kwargs):
+        import chardet
+        content = request.body
+        put_dict = QueryDict(request.body, encoding='utf-8')
+        post_list = json.loads(put_dict.get('post_list'))
+        # [{'id': '1', 'userName': '赵生1'}]
+        for row_dict in post_list:
+            id = row_dict.pop('id')
+            User.objects.filter(id=id).update(**row_dict)
+        ret = {
+            'status': True
+        }
+        return HttpResponse(json.dumps(ret))

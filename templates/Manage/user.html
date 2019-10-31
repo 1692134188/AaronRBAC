@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="../../static/plugins/bootstrap/css/bootstrap.css"/>
 </head>
 <body>
+{% csrf_token %}
 <div style="width: 800px;margin: 0 auto;">
     <h1>用户列表</h1>
     <div class="btn-group" role="group" aria-label="...">
@@ -29,9 +30,11 @@
     $(function () {
         init();
         bindEditMode();
+        bindCheckbox();
         bindCheckAll();
         bindCancelAll();
         bindReverseAll();
+        bindSave();
     })
 
     function init() {
@@ -63,13 +66,16 @@
                 $(tr).append(th)
             }
         })
+        $('#table_th').empty();
         $('#table_th').append(tr);
     }
 
     function initBody(table_config, data_list) {
+        $('#table_tb').empty();
         {#遍历循环行#}
         $.each(data_list, function (k, row) {
             var tr = document.createElement('tr');
+            tr.setAttribute('row-id', row['id']);
             $.each(table_config, function (k, config) {
                 if (config.display) {
                     {#遍历循环列#}
@@ -232,6 +238,23 @@
         })
     }
 
+    function bindCheckbox() {
+        // $('#table_tb').find(':checkbox').click()
+        $('#table_tb').on('click', ':checkbox', function () {
+            if ($('#idEditMode').hasClass('btn-warning')) {
+                var ck = $(this).prop('checked');
+                var $currentTr = $(this).parent().parent();
+                if (ck) {
+                    // 进入编辑模式
+                    trIntoEditMode($currentTr);
+                } else {
+                    // 退出编辑模式
+                    trOutEditMode($currentTr)
+                }
+            }
+        })
+    }
+
     function bindReverseAll() {
         $('#idReverseAll').click(function () {
             $('#table_tb').find(':checkbox').each(function () {
@@ -285,6 +308,43 @@
                     }
                 } else {
                     $(this).prop('checked', true);
+                }
+            })
+        })
+    }
+
+    function bindSave() {
+        $('#idSave').click(function () {
+            var postList = [];
+            //找到已经编辑过的tr，tr has-edit='true'
+            $('#table_tb').find('tr[has-edit="true"]').each(function () {
+                // $(this) => tr
+                var temp = {};
+                var id = $(this).attr('row-id');
+                temp['id'] = id;
+                $(this).children('[edit-enable="true"]').each(function () {
+                    // $(this) = > td
+                    var name = $(this).attr('name');
+                    var origin = $(this).attr('origin');
+                    var newVal = $(this).attr('new-val');
+                    if (origin != newVal) {
+                        temp[name] = newVal;
+                    }
+                });
+                postList.push(temp);
+            })
+            alert(JSON.stringify(postList))
+            $.ajax({
+                url: '/web/user-json.html',
+                type: 'PUT',
+                data: {'post_list': JSON.stringify(postList)},
+                dataType: 'JSON',
+                success: function (arg) {
+                    if (arg.status) {
+                        init(1);
+                    } else {
+                        alert(arg.error);
+                    }
                 }
             })
         })
