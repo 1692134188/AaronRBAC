@@ -2,13 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e257ac1e-21c1-4b03-b8a5-fdbe6e0121ce" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/153d819d-5c4d-4dcb-a5e1-b51b4cd39558.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/3c93dc1f-a001-4b31-a6ca-731e69125d3c.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/85159739-e64b-4f22-981a-42ed55fc611c.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e4fa13ec-6219-4835-9a08-c8c8003acb32.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/View/Tools/AaronPager.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/View/Tools/pagination.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AaronRBAC/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/AaronRBAC/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/Manage/user.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Manage/user.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/View/User.py" beforeDir="false" afterPath="$PROJECT_DIR$/web/View/User.py" afterDir="false" />
@@ -57,10 +53,21 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/Manage/user.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="268">
-              <caret line="309" column="50" selection-end-line="355" selection-end-column="7" />
+            <state relative-caret-position="185">
+              <caret line="33" selection-start-line="33" selection-end-line="33" />
               <folding>
-                <element signature="e#11294#12587#0#HTML" />
+                <element signature="e#1880#2237#0#HTML" />
+                <element signature="e#2286#3299#0#HTML" />
+                <element signature="e#3305#3408#0#HTML" />
+                <element signature="e#3497#4281#0#HTML" />
+                <element signature="e#4617#4913#0#HTML" />
+                <element signature="e#4959#5773#0#HTML" />
+                <element signature="e#7483#8582#0#HTML" />
+                <element signature="e#8612#9151#0#HTML" />
+                <element signature="e#9183#10032#0#HTML" />
+                <element signature="e#10063#10548#0#HTML" />
+                <element signature="e#10578#11268#0#HTML" />
+                <element signature="e#12970#13126#0#HTML" />
               </folding>
             </state>
           </provider>
@@ -69,10 +76,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/View/User.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="379">
-              <caret line="76" column="35" selection-start-line="76" selection-start-column="35" selection-end-line="76" selection-end-column="35" />
+            <state relative-caret-position="350">
+              <caret line="65" lean-forward="true" selection-start-line="65" selection-end-line="65" />
               <folding>
                 <element signature="e#0#49#0" expanded="true" />
+                <element signature="e#365#1739#0" />
               </folding>
             </state>
           </provider>
@@ -81,7 +89,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/AaronRBAC/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1150">
+            <state relative-caret-position="643">
               <caret line="46" selection-start-line="46" selection-end-line="46" />
             </state>
           </provider>
@@ -128,7 +136,6 @@
       <find>menu_tree</find>
       <find>p__caption</find>
       <find>action_li</find>
-      <find>print</find>
       <find>ac</find>
       <find>console</find>
       <find>config</find>
@@ -141,6 +148,18 @@
       <find>Csrf</find>
       <find>initBody</find>
       <find>json</find>
+      <find>idPagination</find>
+      <find>initPager</find>
+      <find>request.GET</find>
+      <find>init</find>
+      <find>data</find>
+      <find>alert</find>
+      <find>init(</find>
+      <find>users_status_c</find>
+      <find>global_dict</find>
+      <find>html</find>
+      <find>print</find>
+      <find>window</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -166,18 +185,18 @@
         <option value="$PROJECT_DIR$/RBAC/urls.py" />
         <option value="$PROJECT_DIR$/AaronRBAC/urls.py" />
         <option value="$PROJECT_DIR$/RBAC/models.py" />
+        <option value="$PROJECT_DIR$/AaronRBAC/settings.py" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/.datagrid/cell" />
         <option value="$PROJECT_DIR$/templates/Manage/user.html" />
-        <option value="$PROJECT_DIR$/AaronRBAC/settings.py" />
         <option value="$PROJECT_DIR$/web/View/User.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="877" />
-    <option name="y" value="86" />
-    <option name="width" value="1299" />
-    <option name="height" value="709" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="156" />
+    <option name="y" value="111" />
+    <option name="width" value="1765" />
+    <option name="height" value="840" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -200,55 +219,20 @@
             <path>
               <item name="AaronRBAC" type="b2602c69:ProjectViewProjectNode" />
               <item name="AaronRBAC" type="462c0819:PsiDirectoryNode" />
-              <item name="RBAC" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="AaronRBAC" type="b2602c69:ProjectViewProjectNode" />
-              <item name="AaronRBAC" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="AaronRBAC" type="b2602c69:ProjectViewProjectNode" />
-              <item name="AaronRBAC" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="AaronRBAC" type="b2602c69:ProjectViewProjectNode" />
-              <item name="AaronRBAC" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="plugins" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="AaronRBAC" type="b2602c69:ProjectViewProjectNode" />
-              <item name="AaronRBAC" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="plugins" type="462c0819:PsiDirectoryNode" />
-              <item name="bootstrap" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="AaronRBAC" type="b2602c69:ProjectViewProjectNode" />
-              <item name="AaronRBAC" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="plugins" type="462c0819:PsiDirectoryNode" />
-              <item name="bootstrap" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="AaronRBAC" type="b2602c69:ProjectViewProjectNode" />
-              <item name="AaronRBAC" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="AaronRBAC" type="b2602c69:ProjectViewProjectNode" />
-              <item name="AaronRBAC" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="Home" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="AaronRBAC" type="b2602c69:ProjectViewProjectNode" />
               <item name="AaronRBAC" type="462c0819:PsiDirectoryNode" />
               <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="View" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AaronRBAC" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AaronRBAC" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="View" type="462c0819:PsiDirectoryNode" />
+              <item name="Tools" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -262,20 +246,21 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="database.console.LAST_STATE" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/web/View" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="File.Encoding" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\Code\AaronRBAC\templates\Home" />
-      <recent name="D:\Code\AaronRBAC" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Code\AaronRBAC\web" />
       <recent name="D:\Code\AaronRBAC\templates\Home" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Code\AaronRBAC\web\View" />
+      <recent name="D:\Code\AaronRBAC\templates\Home" />
+      <recent name="D:\Code\AaronRBAC" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -330,12 +315,12 @@
       <workItem from="1572325383883" duration="5734000" />
       <workItem from="1572399388975" duration="18702000" />
       <workItem from="1572429747158" duration="743000" />
-      <workItem from="1572476432789" duration="1804000" />
+      <workItem from="1572476432789" duration="12026000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="86710000" />
+    <option name="totallyTimeSpent" value="96932000" />
   </component>
   <component name="TodoView" selected-index="1">
     <todo-panel id="selected-file">
@@ -348,14 +333,15 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="878" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19906166" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.6608579" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.42091152" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.04155496" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.38069704" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3297587" />
@@ -370,7 +356,7 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="SciView" order="3" weight="0.3297587" />
-      <window_info anchor="right" id="Database" order="4" visible="true" weight="0.1427614" />
+      <window_info anchor="right" id="Database" order="4" visible="true" weight="0.18431635" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -426,6 +412,11 @@
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+    <watches-manager>
+      <configuration name="Python.DjangoServer">
+        <watch expression="aaron_page.page_str()" />
+      </configuration>
+    </watches-manager>
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateExpression">
@@ -457,13 +448,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/RBAC/Tool/MenuHelper.css" />
-    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/django/core/handlers/base.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="108" lean-forward="true" selection-start-line="108" selection-end-line="108" />
-        </state>
-      </provider>
-    </entry>
     <entry file="das://3c93dc1f-a001-4b31-a6ca-731e69125d3c/schema/main/table/RBAC_action" />
     <entry file="das://3c93dc1f-a001-4b31-a6ca-731e69125d3c/schema/main/table/RBAC_permission2action" />
     <entry file="das://3c93dc1f-a001-4b31-a6ca-731e69125d3c/schema/main/table/RBAC_permission" />
@@ -531,15 +515,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://6b5fde57-b2b3-4024-8d9c-75fd71c4b2e9/schema/main/table/RBAC_user">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state projectRestartId="2c57a55f-4376-4790-ab53-6e87f6fedbda">
-          <filtering>
-            <filter text="" />
-          </filtering>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/AaronRBAC/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="493">
@@ -580,13 +555,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/AaronRBAC/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1150">
-          <caret line="46" selection-start-line="46" selection-end-line="46" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -607,22 +575,103 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/web/View/Tools/pagination.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-225" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/View/Tools/AaronPager.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="14" column="8" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
+          <folding>
+            <element signature="e#584#1013#0" />
+            <element signature="e#1043#1094#0" />
+            <element signature="e#1123#1168#0" />
+            <element signature="e#1218#1339#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/django/views/generic/base.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="99">
+          <caret line="70" selection-start-line="70" selection-end-line="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/django/core/handlers/exception.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="36" selection-start-line="36" selection-end-line="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/django/core/handlers/base.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="114" selection-start-line="114" selection-end-line="114" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/django/utils/deprecation.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="95" selection-start-line="95" selection-end-line="95" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://6b5fde57-b2b3-4024-8d9c-75fd71c4b2e9/schema/main/table/RBAC_user">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state projectRestartId="0521ee32-cfec-4dd3-a379-40df9876bc9e">
+          <filtering>
+            <filter text="" />
+          </filtering>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AaronRBAC/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="643">
+          <caret line="46" selection-start-line="46" selection-end-line="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external/lib.dom.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="25">
+          <caret line="17905" column="12" selection-start-line="17905" selection-start-column="12" selection-end-line="17905" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/templates/Manage/user.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="268">
-          <caret line="309" column="50" selection-end-line="355" selection-end-column="7" />
+        <state relative-caret-position="185">
+          <caret line="33" selection-start-line="33" selection-end-line="33" />
           <folding>
-            <element signature="e#11294#12587#0#HTML" />
+            <element signature="e#1880#2237#0#HTML" />
+            <element signature="e#2286#3299#0#HTML" />
+            <element signature="e#3305#3408#0#HTML" />
+            <element signature="e#3497#4281#0#HTML" />
+            <element signature="e#4617#4913#0#HTML" />
+            <element signature="e#4959#5773#0#HTML" />
+            <element signature="e#7483#8582#0#HTML" />
+            <element signature="e#8612#9151#0#HTML" />
+            <element signature="e#9183#10032#0#HTML" />
+            <element signature="e#10063#10548#0#HTML" />
+            <element signature="e#10578#11268#0#HTML" />
+            <element signature="e#12970#13126#0#HTML" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/View/User.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="379">
-          <caret line="76" column="35" selection-start-line="76" selection-start-column="35" selection-end-line="76" selection-end-column="35" />
+        <state relative-caret-position="350">
+          <caret line="65" lean-forward="true" selection-start-line="65" selection-end-line="65" />
           <folding>
             <element signature="e#0#49#0" expanded="true" />
+            <element signature="e#365#1739#0" />
           </folding>
         </state>
       </provider>

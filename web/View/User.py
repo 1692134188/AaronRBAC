@@ -2,6 +2,7 @@ from django.shortcuts import render, HttpResponse
 from django.views import View
 from RBAC.models import User, models
 from django.http.request import QueryDict
+from web.View.Tools import AaronPager
 import json
 
 
@@ -55,15 +56,24 @@ class UserJsonView(View):
             if not tbcg['q']:
                 continue
             q_list.append(tbcg["q"])
-
+        base_url = '/web/user.html'
+        cur_page = request.GET.get('pager',None)
         data_list = User.objects.all().values(*q_list)
+        data_count = data_list.count()
         data_list = list(data_list)
+        aaron_page=AaronPager.AaronPager(data_count,cur_page,5,7,base_url)
+        # print("当前页码："+cur_page+" "+aaron_page.start()+" "+aaron_page.end())
+
+        data_list = data_list[aaron_page.start():aaron_page.end()]
         result = {
             'table_config': table_config,
             'data_list': data_list,
             'global_dict': {
-                'user_status_choices': User.user_status_choices
-            }
+                'user_status_choices': User.user_status_choices,
+                'cur_page':cur_page
+            },
+            # 分页组件生成页码信息
+            'pager': aaron_page.page_str()
         }
         return HttpResponse(json.dumps(result))
 

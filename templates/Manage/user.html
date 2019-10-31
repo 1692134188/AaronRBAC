@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="../../static/plugins/bootstrap/css/bootstrap.css"/>
 </head>
 <body>
-{% csrf_token %}
 <div style="width: 800px;margin: 0 auto;">
     <h1>用户列表</h1>
     <div class="btn-group" role="group" aria-label="...">
@@ -24,29 +23,47 @@
     <thead id="table_th"></thead>
     <tbody id="table_tb"></tbody>
 </table>
+<ul id="idPagination" class="pagination">
+
+</ul>
 </div>
 
 <script type="text/javascript">
     $(function () {
-        init();
+        var p = getUrlParam("p");
+        init(p)
         bindEditMode();
         bindCheckbox();
         bindCheckAll();
         bindCancelAll();
         bindReverseAll();
         bindSave();
+        bindChangePager();
+
     })
 
-    function init() {
+
+    /*通过正则获取url中的参数*/
+    function getUrlParam(name) {
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+        var r = window.location.search.substr(1).match(reg);
+        if (r != null) return decodeURI(r[2]);
+        return null;
+    }
+
+    function init(pager) {
+
         {#通过ajax请求数据#}
         $.ajax({
             url: '/web/user-json.html',
             type: 'GET',
+            data: {'pager': pager},
             dataType: "JSON",
             success: function (result) {
                 initGlobalData(result.global_dict);
                 initHeader(result.table_config);
                 initBody(result.table_config, result.data_list);
+                initPager(result.pager);
             }
         })
     }
@@ -95,6 +112,10 @@
             })
             $('#table_tb').append(tr);
         })
+    }
+
+    function initPager(pager) {
+        $('#idPagination').html(pager);
     }
 
     ///把'text': {'content': "<a href='/userdetail-{m}.html'>{n}</a>", 'kwargs': {'n': '查看详细', 'm': '@id'}},
@@ -333,7 +354,7 @@
                 });
                 postList.push(temp);
             })
-            alert(JSON.stringify(postList))
+
             $.ajax({
                 url: '/web/user-json.html',
                 type: 'PUT',
@@ -341,12 +362,19 @@
                 dataType: 'JSON',
                 success: function (arg) {
                     if (arg.status) {
-                        init(1);
+                        init(3);
                     } else {
                         alert(arg.error);
                     }
                 }
             })
+        })
+    }
+
+    function bindChangePager() {
+        $('#idPagination').on('click', 'a', function () {
+            var num = $(this).text();
+            init(num);
         })
     }
 
